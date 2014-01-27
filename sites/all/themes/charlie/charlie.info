@@ -1,6 +1,6 @@
 screenshot  = screenshot.png
-name        = CCO Communications - Charlie
-description = New theme for CCO Communications based on Zen.
+name        = Charlie
+description = New theme for PCGCampbell Corporate Website based on Zen.
 core        = 7.x
 base theme  = zen
 
@@ -47,6 +47,7 @@ stylesheets[all][] = css/styles.css
 ; Optionally add some JavaScripts to your theme.
 
 ;scripts[] = js/script.js
+scripts[] = bower_components/sass-bootstrap/dist/js/bootstrap.js
 
 
 

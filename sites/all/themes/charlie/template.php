@@ -130,3 +130,142 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+function charlie_preprocess_page(&$variables, $hook) {
+
+  if($variables['is_front']) {
+    $variables['title'] = '';
+  }
+
+  $search_box_var = drupal_get_form('search_form');
+  $search_box = drupal_render($search_box_var);
+  $variables['search_box'] = $search_box;
+  if (isset($variables['node'])) {
+
+    $suggests = &$variables['theme_hook_suggestions'];
+
+    // Get path arguments.
+    $args = arg();
+    // Remove first argument of "node".
+    unset($args[0]);
+
+    // Set type.
+    $type = "page__type_{$variables['node']->type}";
+
+    // Bring it all together.
+    $suggests = array_merge(
+      $suggests,
+      array($type),
+      theme_get_suggestions($args, $type)
+    );
+
+    // if the url is: 'http://domain.com/node/123/edit'
+    // and node type is 'blog'..
+    // 
+    // This will be the suggestions:
+    //
+    // - page__node
+    // - page__node__%
+    // - page__node__123
+    // - page__node__edit
+    // - page__type_blog
+    // - page__type_blog__%
+    // - page__type_blog__123
+    // - page__type_blog__edit
+    // 
+    // Which connects to these templates:
+    //
+    // - page--node.tpl.php
+    // - page--node--%.tpl.php
+    // - page--node--123.tpl.php
+    // - page--node--edit.tpl.php
+    // - page--type-blog.tpl.php          << this is what you want.
+    // - page--type-blog--%.tpl.php
+    // - page--type-blog--123.tpl.php
+    // - page--type-blog--edit.tpl.php
+    // 
+    // Latter items take precedence.
+  } 
+}
+// */
+function charlie_theme() {
+  $items = array();
+  // create custom user-login.tpl.php
+  $items['user_login'] = array(
+    'render element' => 'form',
+    'path' => drupal_get_path('theme', 'charlie') . '/templates',
+    'template' => 'user-login',
+    'preprocess functions' => array(
+      'charlie_preprocess_user_login'
+      ),
+    );
+  $items['user_register_form'] = array(
+    'render element' => 'form',
+    'path' => drupal_get_path('theme', 'fbos') . '/templates',
+    'template' => 'user-register',
+    'preprocess functions' => array(
+      'charlie_preprocess_user_register_form'
+      ),
+    );
+  return $items;
+}
+function charlie_preprocess_user_login(&$variables) {
+}
+function fbos_preprocess_user_register_form(&$variables) {
+}
+
+function charlie_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+    case 'search_block_form':
+      $form['search_block_form']['#size'] = 34;
+      $form['actions']['submit']['#class'] = t('btn');
+      $form['actions']['submit']['#value'] = t('Search'); // Change the text on the submit button
+      // $form['actions']['submit'] = array('#type' => 'image_button', '#src' => base_path() . path_to_theme() . '/images/search-button.png');
+      $form['actions']['submit']['#attributes']['class'][] = 'btn btn-default';
+
+      // Alternative (HTML5) placeholder attribute instead of using the javascript
+      $form['search_block_form']['#attributes']['placeholder'] = t('Search...');
+      $form['search_block_form']['#attributes']['class'][] = 'test';
+    break;
+    case 'user_login':
+    case 'user_login_form':
+    case 'user_login_block':
+    case 'user_register':
+    case 'user_register_form':
+      //$form['#prefix'] = '<div class="container">';
+      //$form['#suffix'] = '</div>';
+      $form['user_login']['#attributes']['class'][] = 'form-horizontal';
+      $form['actions']['#theme_wrappers'] = array();
+      $form['actions']['submit']['#attributes']['class'] = array('btn btn-default');
+    break;
+  }
+}
+/**
+* Preprocess function for correct javascripts on front-end vs. back-end.
+*
+*/
+function charlie_js_alter(&$js) {
+
+    if (arg(0) != 'admin' || !(arg(1) == '1' && arg(2) == 'imce') || !(arg(1) == 'add' && arg(2) == 'edit') || arg(0) != 'panels' || arg(0) != 'ctools') {
+
+    $theme_path = drupal_get_path('theme', 'charlie');
+    $new_jquery = $theme_path . '/bower_components/jquery/jquery.min.js';
+  
+    // Copy the current jQuery file settings and change
+    $js[$new_jquery] = $js['misc/jquery.js'];
+  
+    // Update necessary settings
+    $js[$new_jquery]['version'] = 1.11;
+    $js[$new_jquery]['data'] = $new_jquery;
+  
+    // Finally remove the original jQuery
+    unset($js['misc/jquery.js']);
+  }
+}
+
+function multiexplode ($delimiters,$string) {
+  $ready = str_replace($delimiters, $delimiters[0], $string);
+  $launch = explode($delimiters[0], $ready);
+  return  $launch;
+}
+
+

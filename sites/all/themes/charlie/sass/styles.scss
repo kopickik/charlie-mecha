@@ -12,6 +12,7 @@
 /* HTML element (SMACSS base) rules */
 //@import "normalize";
 @import "../bower_components/sass-bootstrap/lib/bootstrap";
+@import "../bower_components/font-awesome/scss/font-awesome";
 
 /* Layout rules */
 @import "layouts/responsive";
@@ -24,3 +25,6 @@
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
+.form-control, .form-text {
+  margin-bottom: 0.8em;
+}
