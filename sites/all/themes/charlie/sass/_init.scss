@@ -74,6 +74,7 @@ $h6-font-size: 0.67 * $base-font-size;
 $times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
 $times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
 $georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+$palatino:        Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 
 $verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
 $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
@@ -83,6 +84,8 @@ $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+@import url(//fonts.googleapis.com/css?family=Oswald:400,300,700);
+$oswald:          "Oswald";
 
 // Now create some variables for the font stacks we want to use on this site.
 $base-font-family: $verdana; // The font family set on the html element.

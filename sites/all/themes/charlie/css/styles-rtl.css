@@ -3,6 +3,7 @@
  * RTL companion for the styles.scss file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
+@import url(//fonts.googleapis.com/css?family=Oswald:400,300,700);
 /* HTML element (SMACSS base) rules */
 /**
  * @file

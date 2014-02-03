@@ -48,6 +48,8 @@ stylesheets[all][] = css/styles.css
 
 ;scripts[] = js/script.js
 scripts[] = bower_components/sass-bootstrap/dist/js/bootstrap.js
+scripts[] = js/plugins.js
+scripts[] = js/charlie.behaviors.js
 
 
 

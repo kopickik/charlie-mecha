@@ -12,7 +12,9 @@
 /* HTML element (SMACSS base) rules */
 //@import "normalize";
 @import "../bower_components/sass-bootstrap/lib/bootstrap";
+@import "../bower_components/foundation/scss/foundation";
 @import "../bower_components/font-awesome/scss/font-awesome";
+@import "../bower_components/flexslider-compass/flexslider";
 
 /* Layout rules */
 @import "layouts/responsive";
@@ -27,4 +29,100 @@
 /* @import "theme-B"; */
 .form-control, .form-text {
   margin-bottom: 0.8em;
+}
+
+.palatino {
+  font-family: $palatino;
+}
+
+// Fixed header menu test //
+.branding {
+  margin-top: 0.7em;
+}
+#header {
+  z-index: 50000;
+  border-top: 1px solid #fff;
+  display: block;
+  background: #325386; /* Old browsers */
+  background: -moz-linear-gradient(top,  #133566 0%, #0d2240 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#133566), color-stop(100%,#0d2240)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #133566 0%,#0d2240 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #133566 0%,#0d2240 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #133566 0%,#0d2240 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #133566 0%,#0d2240 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#133566', endColorstr='#0d2240',GradientType=0 ); /* IE6-9 */
+  width:100%;
+  height: 68px;
+  -webkit-box-shadow: 1px 1px 2px #222222;
+  -moz-box-shadow: 1px 1px 2px #222222;
+  -o-box-shadow: 1px 1px 2px #222222;
+  -ms-box-shadow: 1px 1px 2px #222222;
+  box-shadow: 1px 1px 2px #222222;
+}
+.fixed-menu {
+  border: none;
+  position: fixed;
+  left: 0px;
+  top: -80px;
+  width: 100%;
+  background-color: #FFFFFF;
+  z-index: 9999;
+  opacity: 0;
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  transition: all 300ms;
+}
+.fixed-menu.fixed_show {
+  opacity: 1;
+  top: 0px;
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+}
+.fixed-menu-wrapper {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#navigation ul.menu {
+  list-style: none;
+  display: table;
+  vertical-align: middle;
+  font-family: 'Oswald';
+  font-size: 0.9em;
+}
+#navigation > ul > li{
+  float: none;
+  vertical-align: middle;
+  display: table-cell;
+  margin: 0 1px 0 0;
+  text-align: center;
+}
+#navigation ul.menu > li > a, #navigation ul.dropdown-menu > li > a {
+  display: block;
+  height: 66px;
+  font-family: inherit;
+  color: #fff;
+  letter-spacing: 2px;
+  padding: 0 15px;
+  font-weight: 300;
+  line-height: 70px;
+  float: left;
+  text-decoration: none;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+#navigation li.active {
+  color: #ccc;
+  background: #0d2240;
+}
+#navigation ul.menu > li > a.active {
+  color: #ccc;
+}
+#navigation li:hover > a {
+  position: relative;
+  background-color: #4f6e94;
+}
+a:hover {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+#navigation ul.menu li.dropdown:hover > ul.dropdown-menu {
+    display: block;
 }
