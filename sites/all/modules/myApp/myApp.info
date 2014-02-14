@@ -1,0 +1,3 @@
+name = My App (Angular Module)
+description = Implements an AngularJS-driven block
+core = 7.x

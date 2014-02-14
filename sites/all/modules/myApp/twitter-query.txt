@@ -1,0 +1,54 @@
+$ curl --get 'https://api.twitter.com/1.1/geo/search.json' --data 'query=Columbia' --header 'Authorization: OAuth oauth_consumer_key="x2slVXmxNifeIrtNWReZeA", oauth_nonce="44a65f2d5caadcbf95884a73fe124c7e", oauth_signature="0mIixlntEkcXnoUuAr8R%2F30di2w%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1391667541", oauth_token="747279714-hSdYiCMI5mH8vTVZVmUvJsQfKUp82XbAaFl3aKaW", oauth_version="1.0"' --verbose
+* About to connect() to api.twitter.com port 443 (#0)
+*   Trying 199.59.148.87... connected
+* Connected to api.twitter.com (199.59.148.87) port 443 (#0)
+* SSLv3, TLS handshake, Client hello (1):
+* SSLv3, TLS handshake, Server hello (2):
+* SSLv3, TLS handshake, CERT (11):
+* SSLv3, TLS handshake, Server finished (14):
+* SSLv3, TLS handshake, Client key exchange (16):
+* SSLv3, TLS change cipher, Client hello (1):
+* SSLv3, TLS handshake, Finished (20):
+* SSLv3, TLS change cipher, Client hello (1):
+* SSLv3, TLS handshake, Finished (20):
+* SSL connection using RC4-SHA
+* Server certificate:
+*    subject: C=US; ST=California; L=San Francisco; O=Twitter, Inc.; OU=Twitter Security; CN=api.twitter.com
+*    start date: 2013-10-10 00:00:00 GMT
+*    expire date: 2014-10-10 23:59:59 GMT
+*    subjectAltName: api.twitter.com matched
+*    issuer: C=US; O=VeriSign, Inc.; OU=VeriSign Trust Network; OU=Terms of use at https://www.verisign.com/rpa (c)10; CN=VeriSign Class 3 Secure Server CA - G3
+*    SSL certificate verify ok.
+> GET /1.1/geo/search.json?query=Columbia HTTP/1.1
+> User-Agent: curl/7.21.4 (universal-apple-darwin11.0) libcurl/7.21.4 OpenSSL/0.9.8y zlib/1.2.5
+> Host: api.twitter.com
+> Accept: */*
+> Authorization: OAuth oauth_consumer_key="x2slVXmxNifeIrtNWReZeA", oauth_nonce="44a65f2d5caadcbf95884a73fe124c7e", oauth_signature="0mIixlntEkcXnoUuAr8R%2F30di2w%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1391667541", oauth_token="747279714-hSdYiCMI5mH8vTVZVmUvJsQfKUp82XbAaFl3aKaW", oauth_version="1.0"
+>
+< HTTP/1.1 200 OK
+< cache-control: no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+< content-length: 4045
+< content-type: application/json;charset=utf-8
+< date: Thu, 06 Feb 2014 06:20:18 GMT
+< expires: Tue, 31 Mar 1981 05:00:00 GMT
+< last-modified: Thu, 06 Feb 2014 06:20:18 GMT
+< pragma: no-cache
+< server: tfe
+< set-cookie: lang=en
+< set-cookie: guest_id=v1%3A139166761857504920; Domain=.twitter.com; Path=/; Expires=Sat, 06-Feb-2016 06:20:18 UTC
+< status: 200 OK
+< strict-transport-security: max-age=631138519
+< x-access-level: read
+< x-content-type-options: nosniff
+< x-frame-options: SAMEORIGIN
+< x-rate-limit-limit: 15
+< x-rate-limit-remaining: 14
+< x-rate-limit-reset: 1391668518
+< x-transaction: 9856198c0b3674e2
+< x-xss-protection: 1; mode=block
+<
+* Connection #0 to host api.twitter.com left intact
+* Closing connection #0
+* SSLv3, TLS alert, Client hello (1):
+{"result":{"places":[{"id":"6dd1efe2ee6ed145","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/6dd1efe2ee6ed145.json","place_type":"admin","name":"District of Columbia","full_name":"District of Columbia, US","country_code":"US","country":"United States","contained_within":[{"id":"96683cc9126741d1","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/96683cc9126741d1.json","place_type":"country","name":"United States","full_name":"United States","country_code":"US","country":"United States","bounding_box":null,"attributes":{}}],"bounding_box":{"type":"Polygon","coordinates":[[[-77.119759,38.791644999999995],[-76.909393,38.791644999999995],[-76.909393,38.995548],[-77.119759,38.995548]]]},"attributes":{}},{"id":"3e71718681740cba","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/3e71718681740cba.json","place_type":"admin","name":"British Columbia","full_name":"British Columbia, Canada","country_code":"CA","country":"Canada","contained_within":[{"id":"3376992a082d67c7","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/3376992a082d67c7.json","place_type":"country","name":"Canada","full_name":"Canada","country_code":"CA","country":"Canada","bounding_box":{"type":"Polygon","coordinates":[[[-141.537991,41.676328999999996],[-51.053518999999994,41.676328999999996],[-51.053518999999994,85.79181],[-141.537991,85.79181]]]},"attributes":{}}],"bounding_box":{"type":"Polygon","coordinates":[[[-139.060971,48.22493],[-114.054252,48.22493],[-114.054252,60.000077999999995],[-139.060971,60.000077999999995]]]},"attributes":{}},{"id":"5a6c65a046a2ec68","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/5a6c65a046a2ec68.json","place_type":"city","name":"Columbia","full_name":"Columbia, SC","country_code":"US","country":"United States","contained_within":[{"id":"6057f1e35bcc6c20","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/6057f1e35bcc6c20.json","place_type":"admin","name":"South Carolina","full_name":"South Carolina, US","country_code":"US","country":"United States","bounding_box":{"type":"Polygon","coordinates":[[[-83.353928,32.033454],[-78.499301,32.033454],[-78.499301,35.21554],[-83.353928,35.21554]]]},"attributes":{}}],"bounding_box":{"type":"Polygon","coordinates":[[[-81.170978,33.943248],[-80.703932,33.943248],[-80.703932,34.131592],[-81.170978,34.131592]]]},"attributes":{}},{"id":"923f01273a937690","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/923f01273a937690.json","place_type":"city","name":"Columbia","full_name":"Columbia, MD","country_code":"US","country":"United States","contained_within":[{"id":"dea1eac2d7ef8878","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/dea1eac2d7ef8878.json","place_type":"admin","name":"Maryland","full_name":"Maryland, US","country_code":"US","country":"United States","bounding_box":{"type":"Polygon","coordinates":[[[-79.487651,37.886604999999996],[-74.986282,37.886604999999996],[-74.986282,39.723037],[-79.487651,39.723037]]]},"attributes":{}}],"bounding_box":{"type":"Polygon","coordinates":[[[-76.9432,39.147649],[-76.796716,39.147649],[-76.796716,39.239679],[-76.9432,39.239679]]]},"attributes":{}},{"id":"05b4e22353b5cf89","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/05b4e22353b5cf89.json","place_type":"city","name":"Columbia","full_name":"Columbia, MO","country_code":"US","country":"United States","contained_within":[{"id":"2526edd24c06e60c","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/2526edd24c06e60c.json","place_type":"admin","name":"Missouri","full_name":"Missouri, US","country_code":"US","country":"United States","bounding_box":{"type":"Polygon","coordinates":[[[-95.774704,35.995683],[-89.09949399999999,35.995683],[-89.09949399999999,40.61364],[-95.774704,40.61364]]]},"attributes":{}}],"bounding_box":{"type":"Polygon","coordinates":[[[-92.433832,38.878113],[-92.24557,38.878113],[-92.24557,39.029402],[-92.433832,39.029402]]]},"attributes":{}}]},"query":{"url":"https:\/\/api.twitter.com\/1.1\/geo\/search.json?query=Columbia","type":"search","params":{"accuracy":0.0,"granularity":"neighborhood","query":"Columbia","autocomplete":false,"trim_place":false}}}kyle at ginger in /Applications/MAMP/htdocs/charlie on themedev1*
+$
