@@ -16,14 +16,6 @@
  * @param $hook
  *   The name of the template being rendered ("maintenance_page" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_maintenance_page(&$variables, $hook) {
-  // When a variable is manipulated or added in preprocess_html or
-  // preprocess_page, that same work is probably needed for the maintenance page
-  // as well, so we can just re-use those functions to do that work here.
-  STARTERKIT_preprocess_html($variables, $hook);
-  STARTERKIT_preprocess_page($variables, $hook);
-}
 // */
 
 /**
@@ -34,16 +26,27 @@ function STARTERKIT_preprocess_maintenance_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("html" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_html(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+
+function charlie_preprocess_html(&$variables, $hook) {
+  $variables['html_attributes_array'] = array(
+    'lang' => $variables['language']->language,
+    'dir' => $variables['language']->dir,
+    'data-ng-app' => t('myApp')
+    );
 
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().
   //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
 }
 // */
-
+function charlie_node_view($node, $view_mode, $langcode)
+{
+  if($node->type == 'post' && $view_mode == 'default')
+  {
+    drupal_add_js(array('MYMODULE' => array('basePath' => 'basePath', 'backImgSrc' => 'backImgSrc')), 'setting');
+    // drupal_add_js(array('myModule' => array('key' => 'value')), 'setting');
+  }
+}
 /**
  * Override or insert variables into the page templates.
  *
@@ -53,7 +56,7 @@ function STARTERKIT_preprocess_html(&$variables, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_page(&$variables, $hook) {
+function charlie_preprocess_page(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -67,11 +70,11 @@ function STARTERKIT_preprocess_page(&$variables, $hook) {
  *   The name of the template being rendered ("node" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_node(&$variables, $hook) {
+function charlie_preprocess_node(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 
   // Optionally, run node-type-specific preprocess functions, like
-  // STARTERKIT_preprocess_node_page() or STARTERKIT_preprocess_node_story().
+  // charlie_preprocess_node_page() or charlie_preprocess_node_story().
   $function = __FUNCTION__ . '_' . $variables['node']->type;
   if (function_exists($function)) {
     $function($variables, $hook);
@@ -88,7 +91,7 @@ function STARTERKIT_preprocess_node(&$variables, $hook) {
  *   The name of the template being rendered ("comment" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_comment(&$variables, $hook) {
+function charlie_preprocess_comment(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -102,7 +105,7 @@ function STARTERKIT_preprocess_comment(&$variables, $hook) {
  *   The name of the template being rendered ("region" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_region(&$variables, $hook) {
+function charlie_preprocess_region(&$variables, $hook) {
   // Don't use Zen's region--sidebar.tpl.php template for sidebars.
   //if (strpos($variables['region'], 'sidebar_') === 0) {
   //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('region__sidebar'));
@@ -119,7 +122,7 @@ function STARTERKIT_preprocess_region(&$variables, $hook) {
  *   The name of the template being rendered ("block" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_block(&$variables, $hook) {
+function charlie_preprocess_block(&$variables, $hook) {
   // Add a count to all the blocks in the region.
   // $variables['classes_array'][] = 'count-' . $variables['block_id'];
 
@@ -208,7 +211,12 @@ function charlie_theme() {
     );
   return $items;
 }
-function charlie_menu_link(array $variables) {
+
+function charlie_preprocess_menu_block_wrapper(&$variables) {
+  $variables['classes_array'][] = 'navbar-collapse collapse';
+}
+
+function charlie_menu_link__main_menu(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
 

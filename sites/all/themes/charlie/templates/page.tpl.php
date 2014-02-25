@@ -9,41 +9,20 @@
 ?>
 
 <div id="page">
-
-  <header class="header" id="header" role="banner">
-    <div class="container">
-    <div class="row">
-
-    <?php if ($logo): ?>
-    <div class="col-md-4 branding">
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
-    </div>
-    <?php endif; ?>
-
-    <?php if ($site_name || $site_slogan): ?>
-      <div class="col-md-4 header__name-and-slogan" id="name-and-slogan">
-        <?php if ($site_name): ?>
-          <h1 class="header__site-name" id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
-          </h1>
+  <header id="theheader" class="theheader theheader-large clearfix" role="banner">
+    <div class="theheader-perspective container">
+      <div class="theheader-front row">
+        <?php if ($logo): ?>
+        <div class="col-md-3 col-sm-4 col-xs-6 branding alpha">
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="navbar-brand" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
+        </div>
         <?php endif; ?>
-
-        <?php if ($site_slogan): ?>
-          <div class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></div>
-        <?php endif; ?>
-      </div>
-    <?php endif; ?>
-
-    <?php print render($page['header']); ?>
-    <div class="col-md-2">&nbsp;</div>
-    <div id="navigation" class="col-md-6">
+        <div id="navigation" class="col-md-7 col-sm-12">
       <div class="navbar-header">
         <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".menu-name-main-menu">
           <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span class="fa fa-bars fa-2x"></span>
         </button>
       </div>
       </div>
@@ -51,15 +30,27 @@
       <?php print render($page['navigation']); ?>
 
     </div>
-    </div>
+      </div>
     </div>
   </header>
 
+  <?php $verge = render($page['sidebar_first']); ?>
+  <?php if ($verge): ?>
+  <div id="verge" class="container-fluid">
+    <?php print $verge; ?>
+    <div class="clearfix"></div>
+  </div>
+  <?php endif; ?>
+
   <div id="main" class="container">
 
-    <div id="content" class="row" role="main">
+    <div id="content" class="row" role="main" data-animate-down="ha-header-hide" data-animate-up="ha-header-small">
       <?php print render($page['highlighted']); ?>
+      <div class="col-sm-12">
+      <div class="col-sm-push-8 col-sm-4">
       <?php print $breadcrumb; ?>
+      </div>
+      </div>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>

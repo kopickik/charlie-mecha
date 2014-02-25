@@ -84,12 +84,11 @@ $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
-@import url(//fonts.googleapis.com/css?family=Oswald:400,300,700);
 $oswald:          "Oswald";
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $verdana; // The font family set on the html element.
-$font-body:        $verdana;
+$base-font-family: $helvetica; // The font family set on the html element.
+$font-body:        $helvetica;
 $font-monospace:   $courier;
 
 
@@ -107,6 +106,11 @@ $nav-height: 3em;
 $tabs-container-bg: #fff;
 $tabs-border: #bbb;
 
+// images.
+img {
+  max-width: 100%;
+}
+
 
 // =============================================================================
 // Partials to be shared with all .scss files.
@@ -120,10 +124,21 @@ $tabs-border: #bbb;
 @import "compass/utilities/sprites";
 // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import "compass/css3";
+@import "compass/css3/transition";
 // Helps set up a vertical rhythm.
 @import "compass/typography/vertical_rhythm";
 // Add the Zen Grids responsive layout mixins.
 @import "zen";
-
+@import "quotes";
+@import "magnific-popup";
+// CUSTOM GOOGLE WEB FONTS.
+@import "../bower_components/sass-bootstrap/lib/bootstrap";
+@import "../bower_components/foundation/scss/foundation";
+@import "../bower_components/font-awesome/scss/font-awesome";
+//@import url(//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700);
+@import url(//fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700);
+@import url(//fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url(//fonts.googleapis.com/css?family=Merriweather:400,400italic,900);
+//@import "../bower_components/flexslider-compass/flexslider";
 // Now we add our custom helper mixins.
 @import "mixins";

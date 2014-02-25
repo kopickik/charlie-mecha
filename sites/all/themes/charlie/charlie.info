@@ -28,6 +28,10 @@ base theme  = zen
 stylesheets[all][] = system.menus.css
 stylesheets[all][] = system.messages.css
 stylesheets[all][] = system.theme.css
+stylesheets[all][] = bower_components/royal-slider/royalslider.css
+stylesheets[all][] = bower_components/royal-slider/skins/minimal-white/rs-minimal-white.css
+stylesheets[all][] = bower_components/rainbow/themes/obsidian.css
+
 
 ; Then we add our own stylesheet.
 stylesheets[all][] = css/styles.css
@@ -48,6 +52,14 @@ stylesheets[all][] = css/styles.css
 
 ;scripts[] = js/script.js
 scripts[] = bower_components/sass-bootstrap/dist/js/bootstrap.js
+scripts[] = bower_components/jquery-waypoints/waypoints.js
+scripts[] = bower_components/hoverintent/jquery.hoverIntent.js
+scripts[] = bower_components/rainbow/js/rainbow.min.js
+scripts[] = bower_components/rainbow/js/language/javascript.js
+scripts[] = bower_components/rainbow/js/language/generic.js
+scripts[] = bower_components/verge/verge.min.js
+scripts[] = bower_components/jquery-backstretch/jquery.backstretch.min.js
+scripts[] = js/lib/jquery.quovolver.js
 scripts[] = js/plugins.js
 scripts[] = js/charlie.behaviors.js
 
@@ -72,6 +84,7 @@ regions[header]         = Header
 regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
 regions[help]           = Help
+regions[verge]          = Verge
 regions[content]        = Content
 regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar
