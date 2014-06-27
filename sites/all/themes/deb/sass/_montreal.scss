@@ -1,0 +1,84 @@
+
+.taxonomy-term div.content div.field-item img {
+  cursor: pointer;
+}
+
+.view-tax-test .views-field-name, .mp {
+  font-weight: 800;
+  color: #325386;
+}
+#want-more-info {
+  float:right;
+  display: inline-block;
+  height: 118px;
+  width: 146px;
+}
+#share-this-work {
+  display: inline-block;
+  height:100px;
+  width: 215px;
+}
+.apply-w-li, .apply-w-li span {
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+  -o-box-sizing: content-box !important;
+  -ms-box-sizing: content-box !important;
+  box-sizing: content-box !important;
+}
+
+/* Client Slider Styles *
+************************/
+
+.audi img:last-child,.autoalliance img:last-child,.blank img:last-child,.childrenscenter img:last-child,.chrysler img:last-child,.dhdc img:last-child,.ecomotors img:last-child,.ford img:last-child,.fordfund img:last-child,.fordracing img:last-child,.gm img:last-child,.honda img:last-child,.hyundai img:last-child,.jdrf img:last-child,.mazda img:last-child,.mc img:last-child,.mercury img:last-child,.nissan img:last-child,.pentastar img:last-child,.prevost img:last-child,.quicklane img:last-child,.scefcu img:last-child,.spartanmotors img:last-child,.toyota img:last-child,.truecar img:last-child,.volvo,.vw img:last-child,.yokohama img:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display:none;
+}
+.bx-viewport {
+  height: 130px !important;
+}
+
+.Infobox2 {
+  width: 145px !important;
+}
+.Infobox2 .infobox-body {
+  padding: 13px 3px 9px !important;
+}
+
+/* ---- .isotope ---- */
+
+.pic {
+  float: left;
+  width: 75px;
+  height: 100px;
+  margin: 2px;
+  display: block;
+}
+
+.pic:hover {
+  background: #a9a9a9;
+  cursor: pointer;
+}
+
+.pic.gigante {
+  width: 232px;
+  height: 308px;
+}
+
+.galleryFilter li
+{
+display: inline;
+list-style-type: none;
+padding-right: 20px;
+}
+
+.isotope {
+  margin-bottom: 50px;
+}
+
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}

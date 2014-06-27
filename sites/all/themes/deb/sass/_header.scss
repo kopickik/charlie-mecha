@@ -1,0 +1,21 @@
+#theheader {
+  display: block;
+  width:100%;
+  font-family: 'Oswald', 'Droid Sans', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  transform: translateY(0%);
+  @include transition(all 0.5s);
+}
+/* Individual states */
+
+.theheader-large {
+  height: 60px;
+  @include background(linear-gradient(top, #325386, #133566));
+}
+
+.theheader-small {
+  height: 58px;
+  @include background(linear-gradient(top, #325386, #133566));
+}

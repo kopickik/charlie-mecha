@@ -1,0 +1,47 @@
+"Our Culture" - make H1
+
+
+
+
+-------------------------
+styles.css
+
+
+-- (line 1180)
+
+.lead {
+    color: #0D5CAB;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+
+-- (line 13745)
+
+.masonry-list li.tile-person p {
+    color: #A18E5C;
+    /* font-family: 'Georgia',serif; REMOVE */
+    font-size: 14px;
+    margin: 1.2em;
+    text-transform: none;
+}
+
+
+-- (line 2777)
+
+table td[class*="col-"], table th[class*="col-"] {
+    display: table-cell;
+    float: none;
+    position: static;
+    vertical-align: top;
+}
+
+
+-- (line 1104)
+
+h1 small, h1 .small, .h1 small, .h1 .small, h2 small, h2 .small, .h2 small, .h2 .small, h3 small, h3 .small, .h3 small, .h3 .small {
+    float: right;
+    font-size: 50%;
+    margin-top: 15px;
+    text-decoration: underline;
+}

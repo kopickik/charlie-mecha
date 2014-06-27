@@ -1,0 +1,632 @@
+/* ##########################################################
+ * # PCGCampbell (alpha -> beta -> charlie) main stylesheet.#
+ * ##########################################################
+ * Author: KHK;
+ * Date: 04/08/2014;
+ * Version: 0.0.4;
+ **** +++++++++++++++++++++++ ****
+
+ *
+ *  Index
+ *  -----------
+ *  1. Imports and Definitions
+ *  2. General Sitewide Styles
+ *    -- Layout
+ *    -- General Styles
+ *    -- Typography
+ *    -- Links 
+ *    -- Header
+ *    -- Sidebars
+ *    -- Footer
+ *  3. Front Page
+ *  4. Inner Pages
+ *    -- "Case Study"
+ *    -- "Basic Page"
+ *    -- "Post"
+ *  5. Forms
+ *  6. Custom Media Queries
+ * 
+ */
+
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+/* HTML element (SMACSS base) rules */
+
+/* Layout rules */
+//@import "layouts/responsive";
+
+/* Component (SMACSS module) rules */
+@import "components/misc";
+// Optionally, add your own components here.
+@import "print";
+
+/* SMACSS theme rules */
+/* @import "theme-A"; */
+/* @import "theme-B"; */
+
+/**** ++++ HOME PAGE ++++ ****/
+header.header {
+  height: 60px;
+}
+#logo img { height: 0;}
+#logo a, #logo span {
+  display:block;
+  width: 236px;
+  height: 48px;
+  @include background(image-url("pcgc-logo-small.png") 0 50% no-repeat);
+}
+#logo { margin-top: 5px; margin-bottom: 5px;}
+#waypointsCtrl, #waypointsCtrl2 {
+  height: 1px;
+  width: 1px;
+}
+.dropdown > ul > li.dropdown-submenu.open > ul.dropdown-menu > li > a {
+    padding-left: 30px;
+}
+li.menu__item.dropdown span.fa {
+  -ms-transform:rotate(270deg); /* IE 9 */
+  -webkit-transform:rotate(270deg); /* Chrome, Safari, Opera */
+  transform:rotate(270deg); /* Standard syntax */
+  /* For Safari 3.1 to 6.0 */
+  -webkit-transition-duration:0.2s;
+  -webkit-transition-timing-function:linear;
+  /* Standard syntax */
+  transition-duration:0.2s;
+  transition-timing-function:linear;
+}
+li.menu__item.dropdown:hover span.fa, li.menu__item.dropdown.open span.fa {
+-ms-transform:rotate(360deg); /* IE 9 */
+-webkit-transform:rotate(360deg); /* Chrome, Safari, Opera */
+transform:rotate(360deg); /* Standard syntax */
+}
+.collapser.collapsed .fa {
+  -ms-transform:rotate(270deg); /* IE 9 */
+  -webkit-transform:rotate(270deg); /* Chrome, Safari, Opera */
+  transform:rotate(270deg); /* Standard syntax */
+  /* For Safari 3.1 to 6.0 */
+  -webkit-transition-duration:0.2s;
+  -webkit-transition-timing-function:linear;
+  /* Standard syntax */
+  transition-duration:0.2s;
+  transition-timing-function:linear;
+}
+.collapser:hover .fa, .collapser .fa {
+-ms-transform:rotate(360deg); /* IE 9 */
+-webkit-transform:rotate(360deg); /* Chrome, Safari, Opera */
+transform:rotate(360deg); /* Standard syntax */
+}
+.col-xs-none {
+  display: none;
+}
+
+#first-time {
+    display: none;
+}
+.space {
+    margin-top: 50px;
+}
+.pb {
+  padding-bottom: 50px;
+}
+.break-width {
+    margin: 0 -20%;
+    padding: 2.5em 5%;
+}
+.vert-divider {
+    height: 64px;
+    border-right: 1px solid #e5e5e5;
+}
+.alpha, .no-left {
+    margin-left: 0;
+    padding-left: 0;
+}
+.parallax {
+  background-attachment: fixed !important;
+}
+.oldie, .ie9 {
+  .parallax {
+    background-attachment: static !important;
+  }
+}
+.touch .parallax {
+  background-attachment: scroll !important;
+}
+
+.spacer {
+  text-align: center;
+}
+.spacer_s0 {
+  min-height: 1px;
+}
+.spacer_s1 {
+  min-height: 100px;
+}
+.spacer_s2 {
+  min-height: 200px;
+}
+.shadow {
+    @include text-shadow(2px 2px 3px #555);
+}
+.light {
+    font-weight: 300;
+}
+.panel-heading {
+    background-color: #d0ccc0;
+    border-color: #ddd;
+    @include transition-property(all);
+    @include transition-duration(0.5s);
+}
+.panel-heading.open {
+    background-color: #b3e5ff;
+}
+.panel-title {
+    font-weight: 300;
+}
+
+.accordion-open {
+    @include transition-property(all);
+    @include transition-duration(0.5s);
+}
+.panel-title a {
+    display: block;
+}
+.front #page-title, .front .links.inline { display: none;}
+.center, .centered { text-align: center;}
+
+/* Tile Grid */
+.tiles { display: block; overflow: hidden; }
+.tiles > li { display: block; height: auto; float: left; padding-bottom: 0; }
+.tiles.two_up { margin-left: -4%; }
+.tiles.two_up > li { margin-left: 4%; width: 46%; }
+.tiles.three_up, .tiles.four_up { margin-left: -2%; }
+.tiles.three_up > li { margin-left: 2%; width: 31.3%; }
+.tiles.four_up > li { margin-left: 2%; width: 23%; }
+.tiles.five_up { margin-left: -1.5%; }
+.tiles.five_up > li { margin-left: 1.5%; width: 18.5%; }
+
+ul.navbar-nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.large {
+  //font-size: 2.827em;
+}
+.xlarge {
+    font-size: 3.998em;
+}
+#main {
+    margin-top: 30px;
+}
+.product-row-img {
+  height: 200px;
+}
+/* -----  FlexSlider styles ----- */
+.flexslider {
+  border: none;
+}
+.progress-bar-container {
+  height: 6px;
+  z-index: 200;
+}
+.progress-bar {
+  background-color: #373737;
+}
+/* -----  Footer  ----- */
+#footer {
+  margin-top: 5em;
+  padding-top: 2em;
+  background: #0D2240 url(../images/noisy_net_@2X.PNG) 0 0 repeat scroll;
+  color: #f4f5f7;
+  padding-bottom: 1em;
+}
+.tweet_time {
+  font-style: italic;
+}
+#footer h4, #footer h5 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+.greyhorizontal {
+  background-color: #3c3c3c;
+  height: 1px;
+}
+.midmargin {
+  margin: 2em 0;
+}
+.greytext {
+  color: #777;
+  transition: all 0.3s ease-in-out;
+}
+.meta {
+  font-size: 0.88em;
+}
+.ftaddress p {
+  line-height: 1.4em;
+  font-weight: 200;
+}
+.iso9001 {
+  background: url(../images/iso_sprite.png) 0 0;
+  height: 44px;
+  width: 52px;
+  text-indent: -9999px;
+}
+.iso14001 {
+  background: url(../images/iso_sprite.png) 52px 0;
+  height: 47px;
+  width: 52px;
+  text-indent: -9999px;
+}
+footer li {
+  display: inline-block;
+  float: left;
+}
+.tweet {
+}
+.unstyled ul, ul.unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+.unstyled li {
+  list-style: none;
+}
+.connect-with-us li {
+  margin-left: 1.2em;
+}
+.connect-with-us li:first-child{
+  margin-left: 0;
+}
+.right-facebook {
+  color: #39589f;
+  transition: all 0.2s ease-in-out;
+}
+.right-youtube {
+  color: #e70030;
+  transition: all 0.2s ease-in-out;
+}
+.right-linkedin {
+  color: #64b7d2;
+  transition: all 0.2s ease-in-out;
+}
+.tweet,
+.query {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #0d2240;
+}
+.tweet_list {
+  border-radius: 0.5em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  background: rgb(51,255,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(51,255,255,1) 0%, rgba(26,230,255,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,255,255,1)), color-stop(100%,rgba(26,230,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(51,255,255,1) 0%,rgba(26,230,255,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(51,255,255,1) 0%,rgba(26,230,255,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(51,255,255,1) 0%,rgba(26,230,255,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(51,255,255,1) 0%,rgba(26,230,255,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ffff', endColorstr='#1AE6FF',GradientType=0 ); /* IE6-9 */
+
+}
+.tweet_list li {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.5em 0.5em 0.8em;
+  list-style-type: none;
+}
+.tweet_list li a {
+}
+.tweet_list .tweet_even {
+  background-color: #91E5E7;
+}
+.tweet_list .tweet_avatar {
+  padding-right: .5em; float: left;
+}
+.tweet_list .tweet_avatar img {
+  vertical-align: middle;
+}
+.right-twitter {
+  color: #45afe2;
+  transition: all 0.2s ease-in-out;
+}
+.right-facebook:hover, .right-youtube:hover, .right-linkedin:hover, .right-twitter:hover {
+  color: #ffb311;
+}
+/*-----------------------------------------------
+                 Front Page
+-----------------------------------------------*/
+
+/*-----------------------------------------------
+                 Inner Pages
+-----------------------------------------------*/
+#isotope-container {
+  min-height: 28em;
+}
+/*-----------------------------------------------
+                   Posts
+-----------------------------------------------*/
+.node-type-post .container-fluid.alpha .col-sm-12 {
+  padding-right: 0;
+}
+/* ==== ARTICLES STYLES - FOR /posts VIEW ============*/
+.view-posts .views-row {
+  border-bottom: 1px dashed #bebebe;
+  min-height: 100px;
+  padding: 1% 3% 0 1%;
+}
+.statlinks {
+  clear: both;
+  width: 10em;
+  margin: 3em 0;
+}
+.view-posts.view-display-id-page .views-field-title {
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 2em;
+  letter-spacing: -0.02em;
+}
+
+.node-type-post h1.title {
+  font-size: 24px;
+}
+.terms {
+  padding: 0 0 1.4em;
+}
+.node-type-post .field-name-field-posted-in {
+  font-size: 1em;
+  display: inline-block;
+  padding: 0 6px;
+  margin: 0 4px;
+}
+
+.views-field-created, .views-field-comment-count, .views-field-field-posted-in, .views-field-totalcount {
+  font-weight: 400;
+  font-size: ceil(($font-size-base * 0.8));
+  padding: 0 0 12px 0;
+}
+.view-id-posts .view-display-id-block td div {
+  padding: 0 7px;
+}
+.node-type-post .submitted {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #f0f0f0;
+  @include border-radius(4px);
+  margin-top: 8px;
+}
+.views-field-created, .views-field-disqus-comment-count, .views-field-comment-count, .views-field-field-posted-in, .views-field-totalcount {
+  display: inline-block;
+  padding: 2px 7px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+
+}
+.view-posts .views-row {
+  background: #FFFFFF;
+    -webkit-transition: background 0.4s, 0.4s ease-in-out;
+    -moz-transition: background 0.4s, 0.4s ease-in-out;
+    -o-transition: background 0.4s, 0.4s ease-in-out;
+    -ms-transition: background 0.4s, 0.4s ease-in-out;
+    transition: background 0.4s, 0.4s ease-in-out;
+} 
+.view-posts .views-row:hover {
+  background: rgba(182, 181, 180, 0.4);
+}
+.views-field-field-posted-in {
+  display: inline-block;
+  cursor: default;
+}
+.views-field-created:hover, .views-field-comment-count:hover, .views-field-field-posted-in:hover, .views-field-totalcount:hover {
+  color: #FAFAFA;
+  background-color: #333333;
+  cursor: default;
+}
+.views-field-comment-count a:hover, .views-field-field-posted-in a:hover {
+  color: #FAFAFA;
+  background-color: #333333;
+  text-decoration: none;
+  cursor: pointer;
+}
+.zoom-gallery li, .gallery li, li.image.photo, li.th {
+    list-style-type: none;
+}
+.yt-gallery img { max-width: 100%;}
+.view-posts .view-content li {
+  list-style-type: none;
+}
+.view-posts .views-field-body {
+  margin-top: 3%;
+}
+.gapbody {
+  margin-bottom: 2.6em;
+}
+.view-posts.view-display-id-page .views-field-field-posted-images-1 {
+  display: inline;
+  float: right;
+  vertical-align: text-top;
+  padding-left: 1.2em;
+  padding-bottom: 2.4em;
+}
+.view-posts.view-display-id-block .views-field-field-posted-images-1 {
+  padding-bottom: 1em;
+}
+.view-posts.view-display-id-page .views-field-field-posted-images-1 .th {
+  margin: 2.9em 0 0;
+}
+.lt-ie9 .view-posts .views-field-field-posted-images-1 {
+  display: block;
+  width: 158px;
+}
+.lt-ie9 .node-article img { width: 100%; height: 100%;}
+
+.view-posts h2.node-title {
+  font-size: 1.5em;
+}
+#news table td[class*="col-"] {
+  padding: 0 10px;
+}
+#news table td.col-first {
+  padding: 0 10px 0 0;
+}
+.node-type-post #content {
+  padding-left: 0;
+  padding-right: 0;
+}
+.node-type-post .page__title, .node-type-post .node__title, .node-type-post .node__title a {
+  font-family: 'Merriweather', $palatino;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
+  color: #f7f7f7;
+  @include text-shadow(#333332 0px 2px 4px);
+}
+.node-type-post .post-subheadline {
+  font-family: 'Merriweather', $palatino;
+  font-weight: 400;
+  padding: 0.2em;
+  @include text-shadow(#111111 0px 1px 5px);
+  background: #110110;
+}
+.node-type-post .post-subheadline .field-name-field-subheadline .field-item { line-height: 1.3em; }
+.node-type-post {
+  #content {
+    #content-section {
+      font-family: 'Droid Serif', $palatino;
+    }
+  }
+}
+
+.node-type-post .post-cover {
+  background-position: center;
+  min-height: 18em;
+  margin-bottom: 4em;
+}
+.node-type-post #post-headlines {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+.backstretch img {
+}
+.backstretch:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(../images/overlays/t.png);
+  @include opacity(0.4);
+  position: absolute;
+}
+.zoom-gallery li, .gallery li, li.image.photo {
+  list-style-type: none;
+}
+.image.photo {
+  border: 5px solid white;
+  @include box-shadow(0 0 1px #555555);
+}
+.image {
+  margin: 1.6em 0;
+}
+.grayed {
+  font-size: 12px;
+  color: #AAAAAA;
+  font-style: italic;
+}
+
+.th {
+  line-height: 0;
+  display: inline-block;
+  // margin: 0 0 1.2em 1.2em;
+  border: solid 4px white;
+  max-width: 100%;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+.node-post .th {
+  line-height: 0;
+  display: inline-block;
+  margin: 0 0 1.2em 0.2em;
+  border: solid 4px white;
+  max-width: 100%;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+.th:hover, .th:focus, .thumb:hover, .thumb:focus {
+  @include box-shadow(0 0 6px 1px rgba(0, 140, 186, 0.5));
+}
+.admin-menu #theheader {
+  top: 21px;
+}
+/*-----------------------------------------------
+                  5. Forms
+-----------------------------------------------*/
+.form-control, .form-text {
+  margin-bottom: 0.8em;
+}
+/* ==== MEDIA QUERIES ==== */
+
+// Hide the toolbar or admin menu on small screens.
+@media all and (max-width: 800px) {
+  #toolbar, #admin-menu {
+    display: none;
+  }
+
+  html {
+    body.toolbar, body.admin-menu {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+  }
+  .admin-menu #theheader {
+    top: 0;
+  }
+  .container > .navbar-header, .container > .row .navbar-header {
+    margin-left: -9px;
+  }
+  ul.navbar-nav li.dropdown:hover > ul.dropdown-menu {
+    display: none;
+  }
+  ul.navbar-nav li.dropdown.open:hover > ul.dropdown-menu {
+    display: block;
+  }
+}
+
+@media all and (max-width: 994px) {
+    .nav > li > a {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .tile-leader {
+      margin: 0 auto 2em;
+      max-width: 250px;
+      float: left;
+    }
+}
+@media all and (max-width: 768px) {
+  .katech-menu-link {
+    display: none !important;
+  }
+}

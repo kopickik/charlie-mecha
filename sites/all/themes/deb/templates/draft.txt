@@ -1,0 +1,116 @@
+The Power Density Quest Continues.
+Why is Power Density the Holy Grail?
+The internal combustion piston engine has been the primary means of automotive propulsion for more than a century. Today, thousands of engineers around the world are hard at work trying to improve this 19th century invention. Some are striving to make Most gains will be incremental. gains; some are hoping for a At EcoMotors we are striving for breakthrough. For all of them us, one measure ing stick is the "acid test" for any engine: power density. Why is this so important? Because, if when you achieve greater power density, a range of critically important attributes beneficial characteristics will result, including Lower lighter weight, smaller size, lower material costs, lower less friction, and greater fuel efficiency.
+
+WE TOOK THE BEST OF...
+• 4-Stroke Engines
+• 2-Stroke Engines
+• Opposed Piston Engines
+• Opposed Cylinder Engines
+ADDED REVOLUTIONARY
+ECOMOTORS INNOVATIONS...
+• Inspired architecture
+• True modularity
+• Electrically Controlled Turbocharger
+TO CREATE THE ONE AND ONLY OPOC®
+• Smaller size
+• Lighter weight
+• Fewer parts
+• Higher efficiency
+• Unmatched power density
+• A truly modular design
+• Low emissions
+• Affordability
+• Modular displacement
+
+
+CRANKTRAIN  opoc Architecture
+A single-module of the opoc® engine has two horizontally opposed cylinders. Each cylinder contains two pistons that oppose each other and move in opposite directions.
+Both sets of pistons drive a single crankshaft with connecting rods. The inner pistons have short connecting rods, and the opposing outer pistons have long connecting rods.
+The engine runs on the two-stroke cycle, so there is combustion and a power stroke each time the opposing sets of pistons move together, compressing the intake charge for ignition.
+The benefit of this architecture is significantly higher power density – the same power in a much smaller and lighter package.
+
+PISTON SPEED – THE INSIGHT
+Piston speed limits maximum engine speed (rpm) due to inertia and friction. Mean piston speed in an opoc® engine is lower, compared with conventional engines.
+Comparing an opoc® with a 4-stroke engine of the same power, mean piston speed, and brake mean effective pressure (BMEP), the crank speed (rpm) of the opoc® will be higher and the engine’s size smaller.  [rewrite for the layman]
+
+
+MOVING PARTS COMPARISON
+Because An opoc® engine has no cylinder heads, valve-train components, or other mechanicals associated with conventional engines.  As a result, the engine is much less complex - there are far fewer moving parts. to generate noise and heat from friction.   Also, , and manufacturing costs are greatly reduced.
+Fewer parts means less cost and easier to assemble and maintain.
+
+DIMENSIONAL COMPARISONS
+opoc® engines are significantly smaller and lighter than conventional engines with similar performance capabilities.
+For example, compare a single-module opoc engine with two similar engines from Cummins and Weichai - the opoc engine occupies a containment space of 0.48 cu. m / 16.95 cu. ft., while the A Cummins ISDe270-30 occupies 0.64 cu. m / 22.6 cu. ft. (33% larger), and the
+A Weichai WP6 Euro III occupies 0.7 cu. m / 24.7 cu. ft. (45% larger).  
+An opoc® engine’s smallest dimension is height, so its weight will sit lower in a vehicle’s chassis, It helps give the vehicle a lower center of gravity, which helps to improve stability and handling.
+More power in a smaller package enables endless potential for innovation in vehicle and machine design.
+[one set of product comparison images + numbers]
+WEIGHT AND POWER DENSITY COMPARISONS
+An opoc® engine weighs less than a conventional engine with similar performance capabilities.
+It also produces more power per pound of engine weight – it has a higher power-to-weight ratio.
+And it produces much more power per liter of displacement – it has much higher power density.
+
+EFFICIENT COMBUSTION UNIFLOW SCAVENGING AND ASYMMETRIC PORT TIMING
+Historically, a challenge of 2-stroke engines has been adequate purging of the exhaust gas from the cylinder.  The reason had to do with the fixed nature of intake and exhaust ports in a cylinder with a single piston.
+An opposed piston engine helps overcome this challenge by providing another degree of control of the intake and exhaust events - with two pistons in each cylinder the timing of these events can be better managed. 
+In addition, our opoc engines utilize side injectors to precisely deliver fuel, as well as innovative piston head designs to insure proper air/fuel mixing, to insure complete exchange of exhaust gas with fresh air/fuel mixture, and to manage thermal loads.
+Our patented electronically controlled turbo-charger (ECT) is instrumental in managing air flow and pressure – critical elements of high-performance 2-stroke operation.
+The benefit of our attention to combustion detail is a cleaner more efficient engine.
+
+o   In opposed-piston engines, the combustion chamber is contained between the two pistons and tops and within the cylinder wall. The opoc® engine's innovative combustion system is developed with:
+• Side injectors.
+• A torus-shaped combustion chamber in the exhaust pistons that swirls the gases for more efficient combustion and extraction.
+• Flat intake pistons to support efficient gas exchange when the fresh intake charge pushes out the spent exhaust gases.
+The opoc® engine’s architecture enables uniflow scavenging, which means that the flow of intake and exhaust gases moves in a single direction as they are being exchanged in the cylinder. Assisted by turbo boost pressure, the intake gases directly push out the exhaust gases. This reduces the mixing of the fresh air-fuel mixture and exhaust gases, which helps lower exhaust emissions compared with traditional two-stroke engines.
+We achieved uniflow scavenging by asymmetrically timing the opoc® ’s intake and the exhaust pistons: As the pistons move through the cylinders, the intake pistons uncover only the intake ports and, slightly later, the exhaust pistons uncover only the exhaust ports.
+Gas exchange sequence:
+After combustion, as the pistons are moving away from each other, the intake port opens first, when the cylinder pressure is lower. The boost pressure of the intake charge pushes out (scavenges) the exhaust gases and blows them down to the turbocharger when the exhaust port opens slightly later.
+On the second stroke, when the pistons move toward each other, the exhaust port closes first. This stops the fresh intake mixture from short-circuiting into the exhaust. The intake boost pressure fills the cylinder with a fresh air-fuel mixture for combustion.
+
+
+COMBUSTION
+
+
+NOISE
+EM’s An opoc® engine is symmetrical – both sides are essentially the same, and are balanced. Combined with fewer parts, this makes the engine inherently more quietier than a conventional engine.  Less parts means less noise, and balanced operation means reduced vibration.  All this means more end-user comfort.
+• There are many fewer moving parts to generate noise.
+• All the opoc®’s moving parts operate in perfect balance.
+• The opoc® has no cylinder head or valve cover, which propagate noise from the combustion chamber and valvetrain.
+• Dynamic forces on the main bearings are lower, which produces less vibration to produce noise from the lower block and sump.
+
+
+MODULARITY
+opoc® engines can be “teamed” in multiple modules, each one an independent engine with the same displacement and power output of its mate. So,  dual-module opoc® engine has double the power of a single module of the same size. 
+The engine modules are connected to each other with an electrically controlled clutch. This allows a module to be completely shut down and disconnected from its teammate when extra  power is not needed. opoc is a truly modular engine, meaning two (or more) engine modules can be coupled together with an electronically controlled clutch.  Peak power is delivered with both modules coupled and running.  In low power modes, like cruising at highway speed, one module can be completely shut off and decoupled from the powertrain.  In this way, The unit becomes serves as a variable-displacement engine, with the added advantage that all internal motion of the shut-down module stops completely – no power losses from friction, and no heat build-up. As a result, a dual-module opoc® can delivers a fuel economy improvement as high as of 30 to 45 percent over two single modules operating independently.  Other benefits of modularity include optimized engine performance, reduced emissions, and an extended product line. 
+
+
+BENEFITS
+This modularity allows opoc® engines meet a wide range of power output needs, simply by adding identical modules.
+
+Benefits:
+• Significant fuel savings.
+• Optimized engine map performance.
+• Reduced emissions.
+• Reduced development, manufacturing and operating costs for a diverse power output portfolio.
+
+
+ELECTRICALLY CONTROLLED TURBOCHARGER
+This innovation in turbocharger technology incorporates an electric motor into the turbo assembly. The electric motor can spin up the turbo’s compressor vanes independently, when the flow of exhaust gas is slow at lower engine speeds. In essence, this provides a supercharger, as an adjunct to the exhaust-driven turbocharger.
+Boost pressure for the intake charge can be created by the electric motor, the turbocharger, or both.
+The ECT effectively eliminates turbo lag because the electric motor provides much faster compressor response, producing effective boost pressure when there is low energy from the exhaust flow.
+Sometimes, the exhaust energy is greater than what’s needed to drive the compressor. Then, the electric machine on the turbocharger shaft becomes a generator of electrical energy. This is known as waste heat recovery. The generated electrical energy can be stored in the battery for later use, or possibly used to directly supplement the output of the engine.
+
+
+ELECTRICALLY CONTROLLED TURBOCHARGER BENEFITS
+Benefits:
+• Continuous operation of ECT optimizes intake boost pressure.
+• Improved fuel efficiency.
+• Improved emissions.
+• Turbo lag eliminated, giving improved low-end torque for enhanced performance feel and vehicle drivability.
+• Generates electricity for battery charging or other vehicle uses.
+ 
+
+
+
+

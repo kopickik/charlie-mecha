@@ -1,0 +1,33 @@
+{
+  "name": "ecozen",
+  "version": "0.0.3",
+  "authors": [
+    "Kyle Kopicki <kyle.kopicki@gmail.com>"
+  ],
+  "description": "EcoMotors Theme based on Zen.",
+  "main": "ecozen.info",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "twbs/bootstrap-sass#~3.1.1",
+    "jquery-backstretch": "~2.0.4",
+    "jquery-hoverIntent": "*",
+    "jquery-waypoints": "~2.0.4",
+    "rainbow": "~1.1.9",
+    "superscrollorama": "~1.0.2",
+    "magnific-popup": "~0.9.9",
+    "jquery": "1.11.0",
+    "bootstrap": "twbs/bootstrap#~3.1.1",
+    "verge": "~1.9.1"
+  },
+  "resolutions": {
+    "jquery": "1.11.0"
+  }
+}
