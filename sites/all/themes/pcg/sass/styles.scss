@@ -1,0 +1,404 @@
+@import "init";
+@import "totop";//totop
+@import "mfp";//magnific-popup
+
+// GENERAL STYLES + HOMEPAGE STYLES
+$red: #B22C00;
+$blue: #1284c7;
+body { text-rendering: optimizeLegibility;}
+p { font-family: 'Helvetica Neue', $font-family-sans-serif; font-weight: 300; letter-spacing: 0.02em;}
+body.admin-menu .navbar-fixed-top {
+  top: 21px;
+}
+.dropdown-menu > li > a {
+  text-transform: uppercase;
+  color: #111;
+  font-size: 0.8em;
+  padding: 0.7em 0 2em 2.4em;
+}
+.navbar-nav > li > a {
+  text-transform: uppercase;
+}
+#navbar {
+  border-top: 1px solid darken(#fff, 62.5%);
+  @include opacity(0.92);
+  filter: alpha(opacity=92);
+  border-bottom: 2px solid #000;
+}
+#navbar a {
+  font-family: 'robotolight';
+}
+ul.dropdown-menu, .dropdown-menu li, .dropdown-menu a {
+  @include opacity(1);
+  min-height: 30px;
+}
+#block-block-6 .contextual-links-wrapper {
+  top: 90px;
+}
+.tp-banner-container {
+  width:100%;
+  position:relative;
+  padding:0;
+}
+.tp-banner{
+  width:100%;
+  position:relative;
+}
+.front .page-header, .node-type-full-width-page .page-header {
+  display: none;
+}
+.pad50 {
+  padding: 50px 0;
+}
+.eee {
+  background-color: #EEEEEE;
+}
+.red {
+  color: $red;
+}
+.blue { color: $blue;} .blue-bg { background-color: $blue;}
+.mid-padding {
+  padding: 1.3em 0;
+}
+.white {
+  color: #fff;
+}
+.join-our-team a {
+  font-size: 20px;
+}
+.region-header {
+  border-bottom: 5px #1284C7;
+}
+.spacer_s0 {
+  min-height: 1px;
+  color: white;
+}
+.spacer_s1 {
+  min-height: 4.73em;
+}
+.spacer_s2 {
+  min-height: 10em;
+}
+hr.style-one {
+  border: 0;
+  height: 1px;
+  @include background-image(linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)));
+}
+.center, .centered {
+  text-align: center;
+}
+strong, .field .field-label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+.mid-top-padding {
+  padding-top: 2em;
+}
+.mid-bottom-padding {
+  padding-bottom: 2em;
+}
+label { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+.navbar > ul > li > a:hover {
+  background-color: #4F6E94;
+}
+.breadcrumb {
+  margin-bottom: 0;
+}
+/**
+ * Unpublished note.
+ */
+
+/* The word "Unpublished" displayed underneath the content. */
+.unpublished {
+  height: 0;
+  overflow: visible;
+  /* Remove background highlighting from <mark> in normalize. */
+  background-color: transparent;
+  color: #c8c8c8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  /* A very nice CSS3 property. */
+  word-wrap: break-word;
+}
+.lt-ie8 .node-unpublished > *,
+.lt-ie8 .comment-unpublished > * {
+  /* Otherwise these elements will appear below the "Unpublished" text. */
+  position: relative;
+}
+.node-unpublished {
+  @include background(rgba(14, 14, 14, 0.1));
+}
+.tableRow {
+  display: table-row;
+}
+/*
+* BLOG
+*/
+
+.node-type-post .page__title, .node-type-post .node__title, .node-type-post .node__title a {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
+  color: #f7f7f7;
+  text-shadow: #333332 0 2px 4px;
+}
+.node-type-post .post-subheadline-wrap {
+  background: #110110;
+  background: rgba(17, 1, 16, 0.5);
+
+}
+.node-type-post .post-subheadline {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-weight: 400;
+  padding: 0.2em;
+  text-shadow: #111111 0 1px 5px;
+
+}
+.post-author img {
+  -webkit-border-radius: 2.3em;
+  -moz-border-radius: 2.3em;
+  border-radius: 2.3em;
+}
+.node-type-post .post-subheadline .field-name-field-subheadline .field-item { line-height: 1.3em; }
+#content .node-post p,
+.node-type-post h1,
+.node-type-post h2,
+.node-type-post h3,
+.node-type-post h4,
+.node-type-post h5,
+.node-type-post h6,
+.view-notes h4,
+.node-post p
+{
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+
+.node-type-post .post-cover {
+  background-position: center;
+  min-height: 30em;
+}
+.backstretch img {
+}
+.backstretch:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(images/overlays/t.png);
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  position: absolute;
+}
+.zoom-gallery li, .gallery li, li.image.photo {
+  list-style-type: none;
+}
+.image.photo {
+  border: 5px solid white;
+  -webkit-box-shadow: 0 0 1px #555555;
+  box-shadow: 0 0 1px #555555;
+}
+.image {
+  margin: 1.6em 0;
+}
+.grayed {
+  font-size: 12px;
+  color: #AAAAAA;
+  font-style: italic;
+}
+.post-headline {
+  position: absolute;
+  margin: 5em 0;
+}
+.post-headline a, .post-headline h1 {
+  color: #f4f5f7;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
+  text-shadow: #333332 0 2px 4px;
+}
+.back-to-posts { padding: 0.2em; margin-bottom: 0;}
+.back-to-posts a {
+  color: #f4f5f7;
+  -webkit-transition-duration: .4s;
+-moz-transition-duration: .4s;
+-o-transition-duration: .4s;
+-ms-transition-duration: .4s;
+}
+.back-to-posts a:hover {
+  color: #DBDCDE;
+  -webkit-transition-duration: .4s;
+-moz-transition-duration: .4s;
+-o-transition-duration: .4s;
+-ms-transition-duration: .4s;
+}
+
+/*
+* CASE STUDIES
+*/
+.node-type-case-study .region-content {
+  margin-bottom: 5em;
+}
+.region-after-content { padding: 3em 0 0; background-color: #eee;}
+.logged-in .main-container {
+  margin-top: 94px;
+}
+.main-container {
+  margin-top: 74px;
+}
+.slideImg {
+  width: 100%;
+  box-sizing: border-box;
+  list-style: none;
+}
+.node-case-study .page-header {
+  padding: 18px 0;
+  margin: 18px 0 10px;
+  font-size: 4em;
+  color: #231f20;
+}
+.casestudy-headline {
+  font-family: 'robotoregular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #325286;
+  line-height: 2em;
+  font-size: 23px;
+}
+.field-name-field-case-study-quote {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.75em;
+  font-style: italic;
+  font-weight: 300;
+}
+.field-name-field-case-study-quoted {
+  line-height: 1.7em;
+  margin-top: 2em;
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.1em;
+}
+.node-type-case-study .region-content .view-content .vocabulary-disciplines h2 a {
+  display: none;
+}
+.taxonomy-term.vocabulary-disciplines, .taxonomy-term.vocabulary-disciplines .field-items, .taxonomy-term.vocabulary-disciplines .field-name-field-tax-image {
+  display: inline-block;
+}
+.taxonomy-term-description p {
+  display: none;
+}
+.field-name-field-tax-image img:hover {
+  cursor: pointer;
+}
+.block-share42 .block-title {
+  margin-bottom: 32px;
+}
+/*
+* OUR WORK PAGE
+*/
+.case-study-grid-item {
+  min-height: 18em;
+}
+/*
+* FULL-WIDTH PAGE
+*/
+.full-width-page-section {
+  margin-top: 74px;
+}
+.full-width-cover {
+  width: 100%;
+  border-bottom: 8px solid #1284c7;
+}
+.field-name-field-cover-image {
+  overflow-x: hidden;
+}
+/*
+*FOOTER STYLES
+*/
+.footer {
+  background-color: #0E233F;
+  border-bottom: 1em solid #000000;
+  color: #ffffff;
+  border-top: none;
+}
+.region-footer { padding-top: 2.2em;}
+.iso-footer {
+  margin-bottom: 22px;
+}
+.iso-footer ul li{
+  display: inline-block;
+  float: left;
+}
+.iso9001 {
+  background:url(../images/iso_sprite.png) 0 0;
+  height: 44px;
+  width: 52px;
+  text-indent: -9999px;
+
+}
+.iso14001 {
+  background:url(../images/iso_sprite.png) 52px 0;
+  height: 47px;
+  width: 52px;
+  text-indent: -9999px;
+
+}
+.social-icons ul li, .social-icons ul li a {
+  border-radius:2px;
+  display:inline-block;
+  margin-left: 14px;
+  float:left;
+  height:41px;
+  width:41px;
+  text-indent:-9999px;
+}
+.social-icons ul li:first-child {
+  margin-left: 0;
+}
+.social-icons ul li a:first-child {
+  margin-left: 0;
+}
+.right-twitter {
+  background:url(../images/social_sprite.png) repeat scroll 122px 0 transparent;
+}
+  .right-twitter:hover {
+  background:url(../images/social_sprite.png) repeat scroll 122px 41px transparent;
+}
+
+  .right-facebook {
+  background:url(../images/social_sprite.png) repeat scroll 0 0 transparent;
+}
+  .right-facebook:hover {
+  background:url(../images/social_sprite.png) repeat scroll 0 41px transparent;
+}
+.right-linkedin {
+  background: url(../images/social_sprite.png) repeat scroll 82px 0 transparent;
+}
+.right-linkedin:hover {
+  background: url(../images/social_sprite.png) repeat scroll 82px 41px transparent;
+}
+  .right-youtube {
+  background:url(../images/social_sprite.png) repeat scroll 41px 0 transparent;
+}
+  .right-youtube:hover {
+  background:url(../images/social_sprite.png) repeat scroll 41px 41px transparent;
+}
+.right-twitter, .right-facebook, .right-youtube, .right-linkedin {
+  color: #45afe2;
+  transition: all 0.2s ease-in-out;
+}
+.right-facebook:hover, .right-youtube:hover, .right-linkedin:hover, .right-twitter:hover {
+  color: #ffb311;
+}
+
+
+
+
+
+// MEDIA QUERIES
+@media (max-width: $screen-md) {
+  .nav > li > a {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

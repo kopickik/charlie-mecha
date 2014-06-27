@@ -1,0 +1,83 @@
+name = PCG
+description = A sub-theme of Bootstrap (https://drupal.org/node/1976938)
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[after_content]  = 'After Content'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+stylesheets[all][] = js/rs-plugin/css/settings.css
+;stylesheets[all][] = bower_components/flexslider/flexslider.css
+stylesheets[all][] = bower_components/font-awesome/css/font-awesome.min.css
+stylesheets[all][] = css/icomoon.css
+stylesheets[all][] = css/styles.css
+
+
+; For information on choosing the desired method, please read the Drupal
+; Bootstrap sub-theme "how-to" documentation:
+; https://drupal.org/node/1978010
+
+; ;----------------------------------
+; ; METHOD 1: Bootstrap Source Files
+; ;----------------------------------
+; 
+; ;;;;;;;;;;;;;;;;;;;;;
+; ;; Scripts
+; ;;;;;;;;;;;;;;;;;;;;;
+; 
+scripts[] = bower_components/hammerjs/hammer.js
+scripts[] = 'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.min.js'
+;scripts[] = 'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js'
+;scripts[] = 'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js'
+;scripts[] = 'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js'
+;scripts[] = 'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js'
+;scripts[] = 'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js'
+;scripts[] = 'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js'
+;scripts[] = 'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js'
+;scripts[] = 'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js'
+;scripts[] = 'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js'
+;scripts[] = 'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js'
+;scripts[] = 'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js'
+;
+; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
+; settings[bootstrap_cdn] = ''
+scripts[] = bower_components/jquery-easing/jquery.easing.min.js
+scripts[] = bower_components/yepnope/yepnope.1.5.4-min.js
+scripts[] = bower_components/jquery-hoverIntent/jquery.hoverIntent.js
+scripts[] = bower_components/imagesloaded/imagesloaded.pkgd.min.js
+scripts[] = bower_components/verge/verge.min.js
+scripts[] = bower_components/jquery-backstretch/jquery.backstretch.min.js
+scripts[] = bower_components/magnific-popup/dist/jquery.magnific-popup.min.js
+;scripts[] = bower_components/flexslider/jquery.flexslider-min.js
+
+scripts[] = js/pcg.totop.js
+;scripts[] = js/pcg.revSlider.js
+scripts[] = js/pcg.postCover.js
+scripts[] = js/pcg.fullWidthCover.js
+scripts[] = js/pcg.behaviors.js
+
+; ;-------------------------
+; ; METHOD 2: Bootstrap CDN
+; ;-------------------------
+;
+; Method 2 uses BootstrapCDN, the only thing you might need to provide here
+; is overrides to Bootstrap theme settings. Copy them here from the base theme
+; to override.

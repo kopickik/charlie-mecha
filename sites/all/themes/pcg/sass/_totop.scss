@@ -1,0 +1,74 @@
+/* UItoTop styles /*
+/* ==============
+*/
+#toTop {
+  display:none;
+  text-decoration:none;
+  position:fixed;
+  bottom: 1.6%;
+  right: 2%;
+  overflow:hidden;
+  width: 16px;
+  text-align: center;
+  height: 12px;
+  line-height: normal;
+  border:none;
+  font-family: 'icomoon';
+  color: #2a2a2a;
+  font-size: 12px;
+  @include transition(color 0.3s ease-out, background-color 0.3s ease-out, height 0.3s ease-out);
+  z-index: 1001;
+  @include border-radius(2px);
+}
+#toTop:hover {
+  color: #fff;
+  height: 16px;
+  background-color: darken(#5c7491, 30%);
+}
+#toTop:before {
+    content: "\e721";
+}
+#toTopHover {
+  width: 16px;
+  height: 12px;
+  display:block;
+  overflow:hidden;
+  float:left;
+  opacity: 0.01;
+  -moz-opacity: 0.01;
+  filter:alpha(opacity=0);
+}
+.lt-ie9 #toTop {
+    display:none;
+  text-decoration:none;
+  position:fixed;
+  bottom:4px;
+  right:4px;
+  overflow:hidden;
+  width:51px;
+  height:51px;
+  border:none;
+  /*background:url(images/ui.totop.png) no-repeat left top;*/
+  -webkit-transition: all 0s ease 0s;
+    -moz-transition: all 0s ease 0s;
+    -o-transition: all 0s ease 0s;
+    -ms-transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
+}
+
+.lt-ie9 #toTopHover {
+  /*background:url(images/ui.totop.png) no-repeat left -51px;*/
+  width:51px;
+  height:51px;
+  display:block;
+  overflow:hidden;
+  float:left;
+  opacity: 0.01;
+  -moz-opacity: 0.01;
+  filter:alpha(opacity=0);
+}
+
+#toTop:active, #toTop:focus {
+  outline:none;
+}
+/* End UIToTop styles */

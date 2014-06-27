@@ -116,11 +116,6 @@ var Drupal = Drupal || {};
           this.bootstrapAnchor(anchors[i]);
         }
       }
-      $scrollableElement.once('bootstrap-anchors', function () {
-        $scrollableElement.on('click.bootstrap-anchors', 'a[href*="#"]:not([data-toggle],[data-target])', function(e) {
-          this.scrollTo(e);
-        });
-      });
     },
     bootstrapAnchor: function (element) {
       element.validAnchor = element.nodeName === 'A' && (location.hostname === element.hostname || !element.hostname) && element.hash.replace(/#/,'').length;
